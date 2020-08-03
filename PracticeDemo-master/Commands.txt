@@ -1,9 +1,14 @@
-sudo apt-get install git –y
-sudo git clone https://github.com/NitinSingh01/PracticeDemo.git
-cd PracticeDemo/
-sudo sh setup.sh
-sudo docker-compose up
-sudo docker exec -it practicedemo_mysql1_1 mysql -usa –ppassword
-show databases;
-use UID;
-create table UID (FirstName varchar(100), LastName varchar(100), UID varchar(100));
+sudo yum install git –y
+sudo git clone https://github.com/NitinSingh01/practice-demo-aws.git
+cd sintval-aws/PracticeDemo-master/
+sudo sh setup.sh 
+cd practice-demo-aws/PracticeDemo-master/
+docker-compose up –d
+docker ps  
+docker exec –it practicedemo-master_mysql1_1 mysql –usa –ppassword
+show database;
+Use UID;
+create table UID(FirstName varchar(100),LastName varchar(100),UID varchar(100));
+docker exec -it practicedemo-master_mysql1_1 mysql -usa –ppassword
+Use UID;
+Select * from UID;
